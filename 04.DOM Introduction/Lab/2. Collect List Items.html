@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <ul id="Unordered List">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+        <textarea id="textArea" cols="20" rows="3"></textarea>
+        <button onclick="solve()" style="margin-left: 18px;margin-top: 10px;">Extract Text</button>
+        <script>
+            function solve(){
+                let ul = document.getElementById("Unordered List");
+                let textArea = document.getElementById("textArea");
+                let liElements = ul.getElementsByTagName('li')
+                for (let i = 0; i < liElements.length; i++) {
+                    textArea.value += liElements[i].textContent +'\n';
+                }
+            }
+        </script>
+    </body>
+</html>

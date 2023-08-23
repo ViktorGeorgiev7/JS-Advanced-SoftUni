@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <h1>Read More Example</h1>
+    </head>
+<body>
+    This is a short introduction to the topic.
+    <a href="#" id = "more" onclick="showClick()">Read more...</a>
+    <script>
+        function showClick(){
+            let moreText = document.getElementById("text");
+            moreText.style.display="inline";
+
+            let hyperButton = document.getElementById("more")
+            hyperButton.style.display = "none";
+        }
+    </script>
+    <span id="text" style="display:none;">Get pranked!</span>
+</body>
+</html>

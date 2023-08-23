@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <textarea style="margin-left: 5px;margin-top: 10px;" id="n" cols="10" rows="1"></textarea>
+        <span style="margin-left: 5px; margin-right: 5px;">+</span>
+        <div></div>
+        <textarea style="margin-top: 20px;margin-left: 5px;" id="addend" cols="10" rows="1"></textarea>
+        <span style="margin-left: 5px; margin-right: 5px;">=</span>
+        <div></div>
+        <textarea style="margin-top: 20px;margin-left: 5px;" id="result" cols="10" rows="1"></textarea>
+        <div></div>
+        <button onclick="addition()" style="margin-left: 6px;">Calc</button>
+        <script>
+            function addition(){
+                let result = document.getElementById('result');
+                let n = document.getElementById('n');
+                let addend = document.getElementById('addend');
+                result.value = Number(n.value)+Number(addend.value);
+            }
+        </script>
+    </body>
+</html>

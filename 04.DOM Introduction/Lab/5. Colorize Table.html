@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Name Town</h1>
+</head>
+<body>
+    <span style="font-size:x-large;">Eve Sofia</span>
+    <div></div>
+    <span style="font-size:x-large;">Nick Varna</span>
+    <div></div>
+    <span style="font-size:x-large;">Didi Ruse</span>
+    <div></div>
+    <span style="font-size:x-large;">Tedy Varna</span>
+    <div></div>
+    <button onclick="colorize()" style="font-size: large;margin-top: 2px;">Colorize</button>
+    <script>
+        function colorize(){
+            let spans = document.querySelectorAll("span");
+            for (let i = 0; i < spans.length; i++) {
+                if (i%2==0) {
+                    spans[i].style.backgroundColor = "teal";
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Extract Parenthesis</h1>
+</head>
+<body>
+    <p id="content">The Rose Valley (Bulgaria) is located just south of the Balkan Mountains (Kazanlak). The most common oil-bearing rose found in the valley is the pink-petaled Damask rose (Rosa damascena Mill). 
+    </p>
+    <button style="font-size: larger;" onclick="extract()">Extract</button>
+    <div></div>
+    <textarea style="margin-top: 5px;" id="textArea" cols="10" rows="5"></textarea>
+    <script>
+        function extract(){
+            let rawText = document.querySelector("#content")
+            let text = rawText.textContent;
+            let arr=[]
+            let word = '';
+            let textArea = document.querySelector("#textArea");
+            for (let i = 0; i < text.length; i++) {
+                if (text[i-1] == '(') {
+                    for (let j = i; j < text.length; j++) {
+                        if (text[j] == ')') {
+                            arr.push(word)
+                            word = '';
+                            textArea.value = arr.join('; ')
+                            break;
+                        }
+                        word += text[j];
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

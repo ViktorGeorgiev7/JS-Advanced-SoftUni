@@ -25,6 +25,4 @@ for (let i = 0; i < input.length; i++) {
     }
     else{cheapestPrices.push(product)}
 }
-cheapestPrices.forEach(element => {
-    console.log(element.name +'-> '+ element.price + ' ' +element.town)
-});
+cheapestPrices.forEach(element => {console.log(element.name +'-> '+ element.price + ' ' +element.town)});

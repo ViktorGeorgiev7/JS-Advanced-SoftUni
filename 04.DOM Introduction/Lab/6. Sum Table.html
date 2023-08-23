@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Product Cost</h1>
+</head>
+<body>
+    <span style="font-size:x-large;">Beer 2.88</span>
+    <div></div>
+    <span style="font-size:x-large;">Fries 2.15</span>
+    <div></div>
+    <span style="font-size:x-large;">Burger 4.59</span>
+    <div></div>
+    <a id="total" style="font-size:x-large;">Total: </a>
+    <div></div>
+    <button onclick="sum()" style="font-size: large;margin-top: 4px;">Sum</button>
+    <script>
+        function sum(){
+            let products = document.querySelectorAll("span");
+            let total = document.querySelector("#total")
+            let sum = 0;
+            for (let i = 0; i < 3; i++) {
+                stringSplit = products[i].textContent;
+                let n = stringSplit.split(' ');
+                sum+=Number(n[1]);   
+            }
+            total.textContent += sum;
+        }
+    </script>
+</body>
+</html>
